@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head><title>JS Calculator</title></head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            margin: 0;
+			color:white;
+        }
+
+        .calculator {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .display {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            font-size: 1.5rem;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            background-color: #880808;
+            border-radius: 8px;
+            color: white;
+			
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .button {
+            background-color: orange;
+            border: none;
+            font-size: 1.5rem;
+            padding: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            color: white;
+        }
+
+        .button:hover {
+            background: #b3a815;
+			background: linear-gradient(0deg, rgba(179, 168, 21, 1) 0%, rgba(194, 131, 16, 1) 100%);
+            transform: scale(1.1);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+        }
+
+        .button.clear {
+            background-color: #ff5722;
+        }
+
+        .button.clear:hover {
+            background-color: #e64a19;
+        }
+
+        .button.equal {
+            background-color: #8bc34a;
+        }
+
+        .button.equal:hover {
+            background: #22C1C3;
+background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+        }
+
+        .button.operator {
+            background-color: purple;
+        }
+
+        .button.operator:hover {
+            background: #3F5EFB;
+background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+        }
+    </style>
+<body>
+    <button id="demo">
+	 Button
+    </button>
+	<p id="print" style="color:black;">
+	
+	</p>
+	<script>
+		let print = document.getElementById("print");
+		let demo = document.getElementById("demo");
+			
+		document.getElementById("demo").addEventListener("mouseover", function () {
+        document.getElementById("print").innerText = "Lal e pura thenga lal he";
+        document.getElementById("print").style = "width:100px;height:100px;background:red;";
+		});
+		
+		document.getElementById("demo").addEventListener("mouseout", function () {
+        document.getElementById("print").innerText = "";
+        document.getElementById("print").style = "";
+		});
+	</script>
+</body>
+</html>
+	

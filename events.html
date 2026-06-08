@@ -1,0 +1,50 @@
+	<!DOCTYPE html>
+	<html>
+	<body style="display:flex;justify-content:center;" id="body">
+
+	<h2 id="print" style="background:red;width:100px;height:100px;"><img src="" id="demo"></h2>
+
+	<script>
+	document.addEventListener('keydown', function(event) {
+	console.log(event.key);
+	if(event.key == 'w'){
+		document.getElementById("print").style = "width:100px;height:300px;background:red;";	
+	}
+	
+	if(event.key == 'a'){
+		document.getElementById("print").style = "width:100px;height:300px;background:aqua;";	
+	}
+	
+	if(event.key == 's'){
+		document.getElementById("print").style = "width:500px;height:200px;background:green;margin-left:10%;";	
+	}
+	
+	if(event.key == 'd'){
+		document.getElementById("demo").src = "old.png";	
+		document.getElementById("demo").style = "width:500px;height:500px;background:green;";		
+	}
+	
+	if(event.key == 'x'){	
+		document.getElementById("print").innerText = "pura Thenga lal he";	
+		document.getElementById("print").style = "background:red;";			
+	}
+	
+	if(event.key == 'e'){	
+		document.getElementById("body").style = "background:black";	
+		document.getElementById("body").innerText = "Nikal";			
+	}
+	 /* const output = document.getElementById('output');
+	  output.textContent = `Key: ${event.key}, Code: ${event.code}`;
+
+	  if (event.key === 'Enter') {
+		console.log('Enter key pressed!');
+	  }
+
+	  if (event.ctrlKey && event.key === 's') {
+		event.preventDefault(); // Prevent default browser save action
+		console.log('Ctrl + S pressed!');
+	  }*/
+	});</script>
+
+	</body>
+	</html>
